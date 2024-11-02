@@ -1,0 +1,58 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+.butt{
+    border-color: rgb(244, 0, 0);
+    border-width: 5px;
+    border-radius: 100px;
+    height: 8rem;
+    width: 8rem;
+}
+.butt2{
+    height: 3rem;
+    width: 6rem;
+    margin-top: 1rem;
+    background-color: aqua;
+    border-color: blueviolet;
+    border-width: 5px;
+    border-radius: 20px;
+}
+
+.imago{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 33%;
+}
+
+.imago2{
+    display: block;
+    height: 80%;
+    width: 100%;
+}
+
+.imago3{
+    height: 55px;
+    width: 65px;
+}
+
+.js-result{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.js-yes{
+    background-color: green;
+    color: white;
+    height: 35px;
+    width: 50px;
+    margin-top: 0.5rem;
+}
+.js-no{
+    background-color: red; 
+    color: white;
+    height: 35px;
+    width: 50px;
+}
