@@ -2,7 +2,6 @@ let result = '';
 let computerM = '';
 let playerMove = '';
 
-
 document.querySelector('#butte').addEventListener('click', () => {
     pickCompM(); 
     playG('rock'); 
@@ -134,30 +133,6 @@ function Gest(ex,why){
     'Computer'; 
 }
 
-let holder; 
-let AutoPlaying = false;
-
-function Auto(){
-if(AutoPlaying == false){
-    holder = setInterval(function(){ //setInterval returns a value, so, you can store it in a variable to later apply operations on it. 
-        pickCompM(); 
-        pickPlayerM(); 
-        playG(playerMove);
-        Gest(playerMove,computerM); 
-        ElemMoves(playerMove,computerM); 
-        document.querySelector('.js-result').innerHTML = result;
-        document.querySelector('.js-score').innerHTML = 'Your score : ' + score.Wins + '  Computer score : ' + score.Losses + '  Ties : ' + score.Tie;
-    }, 1000 )
-    AutoPlaying = true; 
-    document.querySelector('#nache').innerHTML = 'Stop!'; 
-}
-else{
-    clearInterval(holder); //This command is used to stop an async function. 
-    AutoPlaying = false; 
-    document.querySelector('#nache').innerHTML = 'Autoplay!'; 
-}
-}
-
     function pickCompM(){
 // This math.random function generates a random number between 0 and 1; 
     const randomN = Math.random(); //keep check of the concept of "scope" for different variables. 
@@ -224,7 +199,6 @@ if (playerMove == 'scissors'){
 
         document.querySelector('.js-result').innerHTML = result;
         document.querySelector('.js-score').innerHTML = 'Your score : ' + score.Wins + '  Computer score : ' + score.Losses + '  Ties : ' + score.Tie
-        
         }
 
     function pickPlayerM(){
@@ -238,4 +212,28 @@ if (playerMove == 'scissors'){
         else{
             playerMove = 'scissors'; 
         }
+    }
+
+    let holder; 
+    let AutoPlaying = false;
+    
+    function Auto(){
+    if(AutoPlaying == false){
+        holder = setInterval(function(){ //setInterval returns a value, so, you can store it in a variable to later apply operations on it. 
+            pickCompM(); 
+            pickPlayerM(); 
+            playG(playerMove);
+            Gest(playerMove,computerM); 
+            ElemMoves(playerMove,computerM); 
+            document.querySelector('.js-result').innerHTML = result;
+            document.querySelector('.js-score').innerHTML = 'Your score : ' + score.Wins + '  Computer score : ' + score.Losses + '  Ties : ' + score.Tie;
+        }, 1000 )
+        AutoPlaying = true; 
+        document.querySelector('#nache').innerHTML = 'Stop!'; 
+    }
+    else{
+        clearInterval(holder); //This command is used to stop an async function. 
+        AutoPlaying = false; 
+        document.querySelector('#nache').innerHTML = 'Autoplay!'; 
+    }
     }
