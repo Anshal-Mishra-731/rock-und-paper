@@ -29,10 +29,16 @@
     <p class ="js-moves"></p>
     <p class="js-score"></p>
 
+    <p class="opn-msg">
+        Click on either of the buttons below to initialize the Game! 
+    </p>
+
     <p>
-        <button class="butt2" id="buttc">RESET</button>
+        <button class="butt2" id="buttc" onclick="
+        document.querySelector('.opn-msg').innerHTML = '';">RESET</button>
 
         <button class = "butt2" id="nache" onclick="
+        document.querySelector('.opn-msg').innerHTML = ''; 
         Auto();
         ">Auto Play!</button>
     </p>

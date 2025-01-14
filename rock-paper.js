@@ -227,10 +227,6 @@ if (playerMove == 'scissors'){
         
         }
 
-    ElemMoves(playerMove,computerM); 
-    document.querySelector('.js-result').innerHTML = result;
-    document.querySelector('.js-score').innerHTML = 'Your score : ' + score.Wins + '  Computer score : ' + score.Losses + '  Ties : ' + score.Tie; 
-
     function pickPlayerM(){
         const randomN = Math.random(); 
         if(randomN > 0 && randomN <= 1/3){
